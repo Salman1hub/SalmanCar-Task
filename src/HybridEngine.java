@@ -2,7 +2,6 @@
 
 public class HybridEngine extends Engineable {
 
-    private int speed = 0;
     private GasEngine gasEngine;
     private ElectricEngine electricEngine;
     private Engineable currentEngine;
@@ -41,7 +40,13 @@ public class HybridEngine extends Engineable {
                 currentEngine = gasEngine;
             }
         }
-        this.speed = speed;
+        while (this.speed < speed) {
+            increase();
+        }
+        while (this.speed > speed) {
+            decrease();
+        }
+
         currentEngine.setSpeed(speed);
     }
 }

@@ -2,9 +2,7 @@
 public class CarFactory {
 
     public static Car createCar(EngineType type) {
-        Car car = new Car();
-        car.setEngine(createEngine(type));
-        return car;
+        return new Car(createEngine(type));
     }
 
     private static Engineable createEngine(EngineType type) {
@@ -20,7 +18,7 @@ public class CarFactory {
         }
     }
 
-    public static void installEngine(Car car, EngineType type) {
+    public static void replaceEngine(Car car, EngineType type) {
         car.setEngine(createEngine(type));
     }
 

@@ -2,7 +2,7 @@
 public class SalmanCar {
 
     public static void main(String[] args) {
-        System.out.println(" [Testing Gas Car] ");
+        System.out.println(" [Testing GasCar] ");
         Car gasCar = CarFactory.createCar(EngineType.GAS);
         gasCar.start();
         gasCar.accelerate();
@@ -11,7 +11,7 @@ public class SalmanCar {
         gasCar.brake();
         gasCar.stop();
 
-        System.out.println("\n [Testing Electric Car] ");
+        System.out.println("\n [Testing ElectricCar] ");
         Car electricCar = CarFactory.createCar(EngineType.ELECTRIC);
         electricCar.start();
         electricCar.accelerate();
@@ -20,7 +20,7 @@ public class SalmanCar {
         electricCar.brake();
         electricCar.stop();
 
-        System.out.println("\n [Testing Hybrid Car] ");
+        System.out.println("\n [Testing HybridCar] ");
         Car hybridCar = CarFactory.createCar(EngineType.HYBRID);
         hybridCar.start();
         hybridCar.accelerate();
@@ -35,7 +35,7 @@ public class SalmanCar {
 
         System.out.println("\n [Testing Engine Replacement] ");
         System.out.println("Replacing Gas engine with Electric engine:");
-        CarFactory.installEngine(gasCar, EngineType.ELECTRIC);
+        CarFactory.replaceEngine(gasCar, EngineType.ELECTRIC);
         gasCar.start();
         gasCar.accelerate();
         gasCar.brake();

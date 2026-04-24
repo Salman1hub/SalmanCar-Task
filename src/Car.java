@@ -4,6 +4,10 @@ public class Car {
     private Engineable engine;
     private int speed = 0;
 
+    public Car(Engineable engine) {
+        this.engine = engine;
+    }
+
     public void setEngine(Engineable engine) {
         this.engine = engine;
     }
